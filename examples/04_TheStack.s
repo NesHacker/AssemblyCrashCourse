@@ -1,6 +1,4 @@
 .export Main
-.import PrintRegisters
-
 .segment "CODE"
 
 .proc Main
