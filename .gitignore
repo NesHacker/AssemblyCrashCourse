@@ -1,1 +1,3 @@
 *.o
+examples/01_XandY
+examples/*.deb

@@ -25,6 +25,21 @@
   rti
 .endproc
 
+.proc ResetPalettes
+  bit $2002
+  lda #$3f
+  sta $2006
+  lda #$00
+  sta $2006
+  lda #$0F
+  ldx #$20
+@paletteLoadLoop:
+  sta $2007
+  dex
+  bne @paletteLoadLoop
+  rts
+.endproc
+
 .proc reset
   sei
   cld
@@ -55,6 +70,7 @@
 @vblankWait2:
   bit $2002
   bpl @vblankWait2
+  jsr ResetPalettes
 main:
   jsr Main
   lda #%00001000
