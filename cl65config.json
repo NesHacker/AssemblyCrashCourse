@@ -1,0 +1,4 @@
+{
+  "executable": "C:\\cc65\\bin\\cl65",
+  "params": "--verbose --target nes wrapper.s"
+}
