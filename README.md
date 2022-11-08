@@ -16,7 +16,7 @@ binary distrubuted as part of CC65. Here's an example of how to build the first
 example from the repository root:
 
 ```
-$ cl65 --verbose --target nes wrapper.s examples/01_XandY.s
+$ cl65 --verbose --target nes wrapper.s examples/01_XandY.s ; mv wrapper wrapper.nes
 ```
 
 Note: The "wrapper" code does some basic setup and executes the routine defined
