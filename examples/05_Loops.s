@@ -19,23 +19,13 @@ initialize_hp_loop:
   ; Perform the multi-attack
   ldx #0
 multi_attack_loop:
-  ; If max HP is zero, skip (monster inactive)
   lda $0300, x
-  beq check_condition
-
-  ; Subtract the attack damage
   sec
   sbc #50
-
-  ; If the result >= 0 then write it to memory
-  ; Otherwise, set it to 0
   bpl store_hp
   lda #0
-
 store_hp:
   sta $0300, x
-
-check_condition:
   inx
   cpx #8
   bne multi_attack_loop
