@@ -15,9 +15,9 @@
   cmp $00
   bcc not_lethal
 
-  ; Set address $01 to "1" to indicate the player has died
+  ; Set address $02 to "1" to indicate the player has died
   lda #1
-  sta $01
+  sta $02
 
   ; Branch to this label when damage isn't lethal
 not_lethal:
