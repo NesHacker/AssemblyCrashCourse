@@ -1,4 +1,4 @@
 {
-  "executable": "/opt/homebrew/bin/cl65",
-  "params": "-g --verbose --target nes -o wrapper.nes --ld-args --dbgfile,wrapper.dbg wrapper.s"
+  "executable": "C:\\cc65\\bin\\cl65",
+  "params": "--verbose --target nes wrapper.s"
 }
